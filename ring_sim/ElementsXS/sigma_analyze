@@ -1,0 +1,38 @@
+% Sanity check for Hydrogen
+% Read Hydrogen XS txt  file
+e_vec = [0.1:0.1:60];
+N = 6.022e23;
+Hmat = csvread('Hydrogen.csv');
+
+%%
+re = 2.818e-15; %[m]
+re2 = re^2;
+c = 3e8; %[m/s]
+c2 = c^2;
+me = 9.11e-31;
+mec2 = me*c2;
+Z = 1;
+
+i = 30;
+E0 = e_vec(i);
+
+n_energy = 1000;
+E1min = mec2/(mec2 + 2*E0);
+E1 = linspace(E1min, E0, n_energy);
+
+epsilon = E1/E0;
+
+cost = 1 - mec2/epsilon/E0 + mec2/E0;
+cos2t = cost.^2;
+
+sin2t = 1 - cos2t;
+
+dsigma = pi * re2 * mec2 / E0 * Z * (1/epsilon + epsilon) *...
+    (1 - epsilon .* sin2t / (1 + epsilon.^2));
+
+sum_sigma = sum(dsigma)/n_energy;
+
+(Hmat(2,i) - sum_sigma)/Hmat(2,i)
+
+
+

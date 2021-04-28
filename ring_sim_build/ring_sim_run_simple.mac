@@ -1,0 +1,3 @@
+/run/initialize
+/run/particle/applyCuts
+/control/loop /home/yonatangat/Projects/scattering_tomo/ring_sim_build/looped.mac counter 0 35 1

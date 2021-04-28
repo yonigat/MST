@@ -1,0 +1,93 @@
+ACTIVE_ELEMENTS:
+  - 'H'
+  - 'C'
+#  - 'N'
+#  - 'O'
+#  - 'P'
+#  - 'Ca'
+
+
+MULTI_THREADED: 1
+NUM_OF_THREADS: 30
+NUM_OF_SCORERS: 5
+SINGLE_SCATTERING: 1
+NUM_OF_SOURCES: 1
+NUM_OF_SPECTRUM_BIN: 150
+NUM_OF_ELEMENTS: 2
+NUM_OF_PHOTONS_FORWARD: 5000000
+NUM_OF_PHOTONS_INVERSE: 100000
+ROTATE_PHANTOM: 1
+
+# particle gun - the numbers are the factor we divide pi by
+MIN_THETA: 0.0
+MAX_THETA: 14
+MIN_PHI: 0.0
+MAX_PHI: 0.5
+
+# projection code
+NUM_OF_SHOTS_GT: 90
+NUM_PROJECTIONS_IN_SHOT: 1
+
+# Geometry
+WORLD_XY: 210.0 # cm
+WORLD_Z: 210.0 # cm
+DETECTOR_X: 0.8 # mm
+DETECTOR_Y: 1.512 #0.556 # mm
+DETECTOR_Z: 1.512 #0.556 # mm
+NUM_DETECTOR_COLS: 100 # 272
+NUM_DETECTOR_ROWS: 100 # 224
+CENTER_TO_DET: 267.38 # mm
+SOURCE_TO_CENTER: 605.27 # mm
+RADIUS: 605.27   # mm
+OFFSET_U: 0.0
+OFFSET_V: 0.0
+SHIFT: 1.0 # cm
+PHANTOM_OFFSET_X: 0.0 #mm
+PHANTOM_OFFSET_Y: 0.0 #mm
+PHANTOM_OFFSET_Z: 0.0 #mm
+
+# Volume
+NUM_OF_Z_SLICES: 1
+NUM_OF_VOXELS_X: 2
+NUM_OF_VOXELS_Y: 1
+NUM_OF_VOXELS: 2
+VOXEL_HALF_X: 57.5 #23 # 1.15 #mm
+VOXEL_HALF_Y: 115 #23 # 1.15 #mm
+VOXEL_HALF_Z: 92 #18.4 #1.15 #mm
+NUM_OF_MATERIALS: 1
+
+# Optimization
+NUM_OF_SHOTS_OPTIMIZATION: 3
+OPTIMIZATION_ITER: 120
+
+# Files
+WRITE_TO_FILES: 1
+MAC_FILE_PATH: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/ring_sim_debug/"
+FILE_PROJECTION_CODE: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/projection_code.txt"
+FILE_FIXED_SOURCE: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/all_sources.txt"
+FILE_SOURCE_TO_DET: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_outputs_geom/sourceToDet.csv"
+FILE_SOURCE_POS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_outputs_geom/sourcesPos.csv"
+FILE_DET_POS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_outputs_geom/detectorsPos.csv"
+G4_DIR: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/ring_sim_debug/"
+INPUT_DIR: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/"
+OUTPUT_DIR: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_outputs/"
+GRADIENT_DIR: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_outputs_grad/"
+ERROR_DIR: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/Error/"
+FILE_SPECTRUM: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/spectrum.txt"
+FILE_MATERIALS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/materials.txt"
+FILE_MATERIALS_DICOM_BASIC: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/Dicom_base_materials_new_smart_init.txt"
+FILE_VOXEL_TO_MATERIALS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/voxels_to_materials.txt"
+FILE_VOXEL_TO_MATERIALS_ID: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/voxels_to_materials_id.txt"
+FILE_VOXEL_TO_MATERIALS_TEST: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/phantom/"
+FILE_VOXEL_TO_MATERIALS_Y: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/Y/"
+FILE_VOXEL_TO_MATERIALS_DENS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/voxels_to_materials_dens.txt"
+FILE_XCAT_ID_TO_COMP: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/XCAT/id_to_comp.txt"
+FILE_XCAT_SLICE_PREFIX: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/XCAT/hand/out_hand_act_"
+FILE_SOURCES: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/src_loc.txt"
+FILE_SOURCES_ORIENTATION: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/src_orient/"
+FILE_DETECTORS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/det_loc.txt"
+FILE_DETECTORS_ORIENTATION: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/det_orient/"
+FILE_PHANTOM_OFFSET_ORIENTATION: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/phantom_location_orientation.txt"
+FILE_ELEMENTS: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/elements.txt"
+FILE_A: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/A.txt"
+FILE_Z: "/home/yonatangat/Geant4-workspace/geant4.10.05/examples/basic/run_inputs/Z.txt"

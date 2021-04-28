@@ -1,0 +1,116 @@
+
+# Files - set these paths
+MAIN_FILE_DIR: "/home/yonatangat/Projects/scattering_tomo"
+
+LOAD_FROM_CACHE: False
+EXP_DIR: 'multiple_src_test'
+DATA_DIR: 'full_knee_1_M1E7'
+GT_DATA_DIR: 'full_knee_1_M1E7'
+#GT_DATA_DIR: 'knee_S7E5_UNBLURED'
+
+
+# used only in the case of simple toy volume.
+ACTIVE_ELEMENTS:
+  - 'H'
+#  - 'C'
+#  - 'N'
+  - 'O'
+#  - 'P'
+  - 'Ca'
+
+
+MULTI_THREADED: 1
+NUM_OF_THREADS: 8
+NUM_OF_SCORERS: 5
+SINGLE_SCATTERING: 0
+BIASING: 0
+NUM_OF_SOURCES: 1
+NUM_OF_SPECTRUM_BIN: 150
+NUM_OF_PHOTONS_GT: 5000000
+NUM_OF_PHOTONS_FORWARD: 5000000
+NUM_OF_PHOTONS_INVERSE: 500000
+ROTATE_PHANTOM: 0
+
+# particle gun - the numbers are the factor we divide pi by, Cone beam or Fan beam
+MIN_THETA: 0.0
+MAX_THETA: 14
+MIN_PHI: 0.0
+MAX_PHI: 0.5
+CONE_BEAM: 1
+
+# projection code
+NUM_OF_SHOTS_GT: 1
+NUM_PROJECTIONS_IN_SHOT: 1
+NUM_OF_SHOTS_OPTIMIZATION: 2
+
+# optimization
+OPTIMIZATION_ITER: 40
+
+# Geometry
+WORLD_XY: 210.0 # cm
+WORLD_Z: 210.0 # cm
+DETECTOR_X: 0.8 # mm
+DETECTOR_Y: 0.556 # mm
+DETECTOR_Z: 0.556 # mm
+NUM_DETECTOR_COLS: 1508
+NUM_DETECTOR_ROWS: 400
+CENTER_TO_DET: 600 # mm
+SOURCE_TO_CENTER: 599 # mm
+RADIUS: 306   # mm
+OFFSET_U: 0.0
+OFFSET_V: 0.0
+SHIFT: 1.0 # cm
+PHANTOM_OFFSET_X: 0.0 #mm
+PHANTOM_OFFSET_Y: 0.0 #mm
+PHANTOM_OFFSET_Z: 0.0 #mm
+
+# Volume
+LOAD_INIT: 1
+LOAD_CHECKPOINT: 0
+NUM_OF_Z_SLICES: 80
+NUM_OF_VOXELS_X: 100
+NUM_OF_VOXELS_Y: 100
+NUM_OF_VOXELS: 800000
+VOXEL_HALF_X: 1.15 #mm
+VOXEL_HALF_Y: 1.15 #mm
+VOXEL_HALF_Z: 1.15 #mm
+NUM_OF_MATERIALS: 7
+
+G4_DIR: "ring_sim_build/"
+INPUT_DIR: "run_inputs/"
+OUTPUT_DIR: "run_outputs/"
+GRADIENT_DIR: "run_outputs_grad/"
+ERROR_DIR: "run_inputs/Error/"
+ANGLES_DIR: "angles/"
+MASS_ATTEN_DIR: "elmental_media_info/"
+
+
+WRITE_TO_FILES: 1
+
+FILE_PROJECTION_CODE: "projection_code.txt"
+FILE_INTENS_CODE: "intens_code.txt"
+FILE_FIXED_SOURCE: "all_sources.txt"
+FILE_SOURCE_TO_DET: "run_outputs_geom/sourceToDet.csv"
+FILE_SOURCE_POS: "run_outputs_geom/sourcesPos.csv"
+FILE_DET_POS: "run_outputs_geom/detectorsPos.csv"
+
+FILE_SPECTRUM: "spectrum.txt"
+FILE_MATERIALS: "materials.txt"
+FILE_MATERIALS_DICOM_BASIC: "Dicom_base_materials_new_smart_init.txt"
+FILE_VOXEL_TO_MATERIALS: "voxels_to_materials.txt"
+FILE_VOXEL_TO_MATERIALS_ID: "voxels_to_materials_id.txt"
+FILE_VOXEL_TO_MATERIALS_TEST: "phantom/"
+FILE_VOXEL_TO_MATERIALS_Y: "Y/"
+FILE_VOXEL_TO_MATERIALS_DENS: "voxels_to_materials_dens.txt"
+FILE_XCAT_ID_TO_COMP: "XCAT/id_to_comp.txt"
+FILE_XCAT_SLICE_PREFIX: "XCAT/hand/out_hand_act_"
+FILE_SOURCES: "src_loc.txt"
+FILE_SOURCES_ORIENTATION: "src_orient.txt"
+FILE_DETECTORS: "det_loc.txt"
+FILE_DETECTORS_ORIENTATION: "det_orient.txt"
+FILE_PHANTOM_OFFSET_ORIENTATION: "phantom_location_orientation.txt"
+
+FILE_ELEMENTS: "elements.txt"
+FILE_A: "A.txt"
+FILE_Z: "Z.txt"
+
