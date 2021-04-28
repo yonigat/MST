@@ -1,7 +1,0 @@
-[  3%] Building CXX object CMakeFiles/exampleB1.dir/exampleB1.cc.o
-[  3%] Building CXX object CMakeFiles/exampleB1_lib.dir/exampleB1.cc.o
-CMakeFiles/exampleB1.dir/build.make:62: recipe for target 'CMakeFiles/exampleB1.dir/exampleB1.cc.o' failed
-CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/exampleB1.dir/all' failed
-CMakeFiles/exampleB1_lib.dir/build.make:62: recipe for target 'CMakeFiles/exampleB1_lib.dir/exampleB1.cc.o' failed
-CMakeFiles/Makefile2:104: recipe for target 'CMakeFiles/exampleB1_lib.dir/all' failed
-Makefile:129: recipe for target 'all' failed
